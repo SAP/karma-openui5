@@ -4,19 +4,15 @@ module.exports = function(config) {
 	require("../karma-base.conf")(config);
 	config.set({
 
-		frameworks: ["ui5"],
 		ui5: {
-			urlParameters: [{
-				key: "hidepassed",
-				value: true
-			}, {
-				key: 0,
-				value: "0️⃣"
-			}, {
-				key: "0",
-				value: ""
-			}]
-		}
+			type: "library",
+			paths: {
+				src: "src/main/js",
+				test: "src/test/js"
+			}
+		},
+
+		frameworks: ["ui5"]
 
 	});
 };
