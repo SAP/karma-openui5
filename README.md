@@ -24,6 +24,8 @@
 	- [failOnEmptyTestPage](#failonemptytestpage)
 	- [config](#config)
 	- [tests](#tests)
+  - [logAssertions](#logassertions)
+  - [logHTMLFilePath](#loghtmlfilepath)
 - [API](#api)
 	- [helper](#helper)
 		- [configureIframeCoverage](#configureiframecoverage)
@@ -416,6 +418,32 @@ ui5: {
     "sap/ui/demo/todo/test/unit/AllTests",
     "sap/ui/demo/todo/test/integration/AllJourneys"
   ]
+}
+```
+
+### logAssertions
+Type: `Boolean`  
+Default: `false`  
+
+If set to `true`, the framework would report the result of the assertions.
+
+Example:
+```js
+ui5: {
+  logAssertions: true
+}
+```
+
+### logHTMLFilePath
+Type: `Boolean`  
+Default: `true`  
+
+If set to `false`, the `log.suite[0]` of the test log would be the feature name. Otherwise it would be the path of the testsuite.
+
+Example:
+```js
+ui5: {
+  logHTMLFilePath: false
 }
 ```
 
